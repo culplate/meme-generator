@@ -8,6 +8,9 @@
 // history: HistoryMemes
 // politics: PoliticalCompassMemes
 
+// Tasks: 1. Add library for photos
+// 2. Finalize styles
+
 let inputVal = '';
 const generateBtn = document.querySelector('.generate-meme-btn');
 const memeImg = document.querySelector('.meme-img');
