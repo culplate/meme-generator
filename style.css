@@ -129,4 +129,5 @@ label input {
 
 .fullscale-img {
   min-height: 95vh;
+  object-fit: contain;
 }
