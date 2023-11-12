@@ -28,6 +28,11 @@ function generateMeme() {
         }
     }
 
+    if (inputVal === '') {
+        memeTitle.innerHTML = 'Choose category first!'
+        return;
+    }
+
     fetch(`https://meme-api.com/gimme/${inputVal}`)
         .then((response) => response.json())
         .then(({ url, title, author }) => {
@@ -37,5 +42,17 @@ function generateMeme() {
         })
 }
 
-generateBtn.addEventListener('click', generateMeme);
+function openFullSreen() {
+    const instance = basicLightbox.create(`
+        <img class="fullscale-img" src="${memeImg.getAttribute('src')}">
+    `);
+    instance.show();
 
+    document.addEventListener('keydown', evt => {
+        if (instance.visible() && evt.key === "Escape" || evt.key === " ")
+            instance.close();
+    });
+}
+
+generateBtn.addEventListener('click', generateMeme);
+memeImg.addEventListener('click', openFullSreen);

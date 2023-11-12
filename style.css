@@ -94,6 +94,8 @@ body {
 .meme-title {
   margin: 15px 0 5px 0;
   color: var(--secondary-dark);
+  text-align: center;
+  max-width: 450px;
 }
 
 .meme-img {
@@ -123,4 +125,8 @@ label input {
 
 .radio-wrapper label {
   margin-right: 15px;
+}
+
+.fullscale-img {
+  min-height: 95vh;
 }
